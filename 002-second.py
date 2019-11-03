@@ -32,6 +32,8 @@
 
 
 # Import About model in admin.py to add data by admin
+    from __future__ import unicode_literals
+    from django.contrib import admin
     from web.models import About
 
 
@@ -63,3 +65,27 @@
 # Create a new page about.html and load http://localhost:8000/about
 
 
+# forms.py # sample
+    from django import forms
+    from django.forms.widgets import TextInput, Textarea, Select
+    from django.utils.translation import ugettext_lazy as _
+    from customers.models import Customer
+
+
+    class CustomersForm(forms.ModelForm):
+        class Meta:
+            model = Customer
+            exclude = ['is_deleted',]
+            widgets  = {
+                'name': TextInput(attrs={'class':'required form-control','placeholder': 'NAME'}),
+                'email': TextInput(attrs={'class':'email required form-control','placeholder': 'E-MAIL'}),
+
+            }
+            error_messages = {
+                'name' : {
+                    'required' : _("Name Field is required."),
+                },
+                'email' : {
+                    'required' : _("E-mail Field is required."),
+                },
+            }

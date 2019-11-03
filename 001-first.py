@@ -89,14 +89,18 @@
 #django models
     from django.utils.translation import ugettext_lazy as _
     from django.db import models
+    from decimal import Decimal
+    from django.core.validators import MinValueValidator
 
     class Blog(models.Model):
+        auto_id = models.PositiveIntegerField(db_index=True,unique=True)  #for id as unique
         heading = models.CharField(max_length=128)
         content = models.TextField()
         adult = models.BooleanField(default=False)
         email = models.EmailField()
         date = models.DateField()
         main_content = RichTextUploadingField()  #will be like text editor
+        price = models.DecimalField(default=0.0,decimal_places=2,max_digits=15,validators=[MinValueValidator(Decimal('0.00'))])
         college = models.ForeignKey('web.Colleges') #there is another model named Colleges in the web app
         image = models.ImageField(upload_to='images/blog')
         time = models.DateTimeField()
@@ -106,6 +110,7 @@
             db_table = 'web_blog' #name of table to be created in the database
             verbose_name = ('Blog')
             verbose_name_plural = ('Blogs')
+            ordering = ('-date')  #to show newest at first
 
         def __unicode__(self):
             return str(self.pk)
