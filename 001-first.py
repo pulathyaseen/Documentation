@@ -122,7 +122,7 @@ from __future__ import unicode_literals
     admin.site.register(Blog,BlogAdmin)
 
 
-#to change admin header
+#to change admin header add these tags to change admin page tags
     admin.site.site_header = "PROJECT Admininistration"
     admin.site.site_title = "PROJECT Admin Portal"
     admin.site.index_title = "Welcome to PROJECT Researcher Portal"
