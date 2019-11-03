@@ -212,3 +212,7 @@ from __future__ import unicode_literals
 #delete migrations
     find . -path "*/migrations/*.pyc"  -delete
     find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
+
+
+# Use an existing project load this command after migrete in terminal
+    python manage.py loaddata initial_data user_groups permissions notification
