@@ -1,12 +1,10 @@
 # CONTEXT PROCESSORS
     # Create a new file web/context_processors.py
         def main_context(request):
-
             return {
                 "caption" : "Femme Caption"
             }
     # Add to settings.py (TEMPLATES/OPTIONS)
-
         'web.context_processors.main_context',
 
     <title>caption</title>  #this has to be Replaced with
@@ -57,12 +55,18 @@
             "caption" : "Femme Caption",
         }
         return render(request, 'web/about.html',context)
-# Specify in url patterns (web/views.py)
-    url(r'^about$', views.about,name="about"),
+    # Specify in url patterns (web/views.py)
+        url(r'^about$', views.about,name="about"),
 
-# update link in index 
-    href = "{% url 'web:about' %}"
-# Create a new page about.html and load http://localhost:8000/about
+    # update link in index 
+        href = "{% url 'web:about' %}"
+    # Create a new page about.html and load http://localhost:8000/about
+    
+    # filter() returns a queryset eg:
+        product.filter(id=pk) #if pk = 1 then it will show elements that has id = 1
+        product.filter(name='sam') #it will show only if the name is "sam" none other(SAM,Sam,..)
+        product.filter(name__contains='sam') # it will return every names that contain sam eg:(samuel, ...) case sensitive
+        product.filter(name__icontains='sam') # it will return every names that contain sam eg:(Sam, Samuel,...), not case sensitive.
 
 
 # forms.py # sample
