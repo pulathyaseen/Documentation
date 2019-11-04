@@ -1,0 +1,14 @@
+#to change into root user
+    sudo su
+
+#install python
+    apt-get install python python-dev libq-dev python-setuptools
+    
+#install postgresql database
+    apt-get install postgresql postgresql-contrib phppgadmin
+
+#installing pip
+    easy_install pip
+    
+#installing using pip
+    pip install virualenv virtualenvwrapper
