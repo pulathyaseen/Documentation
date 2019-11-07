@@ -93,3 +93,8 @@
                     'required' : _("E-mail Field is required."),
                 },
             }
+            
+#error while auto complete: style of some things doesn't work
+    venv/lib/python2.7/site-packages/dal_select2/widgets.py   #open this file and delete the line that
+        'admin/js/vendor/jquery/jquery%s.js' % extra, # it occured becouse linking of multiple jquery files.
+    #removing this line will automaticallly repair error
