@@ -60,7 +60,8 @@
     )
 
 
-#define urlpatterns in project/urls.py  --> python 2
+#define urlpatterns in project/urls.py 
+#  --> python 2
     from django.conf.urls import url ,include
     from django.contrib import admin
     from django.views.static import serve
@@ -74,7 +75,7 @@
         url(r'^static/(?P<path>.*)$', serve, { 'document_root': settings.STATIC_FILE_ROOT}),
     ]
 	
-	# --> python 3
+# --> python 3
 	
 	from django.contrib import admin
 	from django.urls import path, include
@@ -89,7 +90,8 @@
 	] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 	
 	
-#create web/urls.py and paste the following --> python2
+#create web/urls.py and paste the following
+#  --> python2
     from django.conf.urls import url
     import views
 
