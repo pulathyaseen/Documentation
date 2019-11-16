@@ -96,7 +96,7 @@
 
     urlpatterns = [
         url(r'^$', views.index,name="index"),
-        #url(r'^about/$', views.about,name="about"),
+        url(r'^about/$', views.about,name="about"),
     ]
 
 	
@@ -111,8 +111,6 @@
 	urlpatterns = [
    		path('', views.index, name='index'),
     	path('academics/', views.academics, name='academics'),
-    	path('achievements/', views.achievements, name='achievements'),
-    	path('gallery/', views.photo_gallery, name='photo_gallery'),
 	]
 	
 	
