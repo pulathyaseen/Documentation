@@ -60,7 +60,7 @@
     )
 
 
-#define urlpatterns in project/urls.py
+#define urlpatterns in project/urls.py  --> python 2
     from django.conf.urls import url ,include
     from django.contrib import admin
     from django.views.static import serve
@@ -73,9 +73,23 @@
         url(r'^media/(?P<path>.*)$', serve, { 'document_root': settings.MEDIA_ROOT}),
         url(r'^static/(?P<path>.*)$', serve, { 'document_root': settings.STATIC_FILE_ROOT}),
     ]
+	
+	# --> python 3
+	
+	from django.contrib import admin
+	from django.urls import path, include
+	from django.conf import settings
+	from django.conf.urls.static import static
 
 
-#create web/urls.py and paste the following
+	urlpatterns = [
+   		path('admin/', admin.site.urls),
+   		path('', include('web.urls', namespace='web')),
+    
+	] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+	
+	
+#create web/urls.py and paste the following --> python2
     from django.conf.urls import url
     import views
 
@@ -85,7 +99,24 @@
         #url(r'^about/$', views.about,name="about"),
     ]
 
+	
+#  --> python3
+	from django.contrib import admin
+	from django.urls import path
+	from . import views
 
+
+	app_name = 'web'
+
+	urlpatterns = [
+   		path('', views.index, name='index'),
+    	path('academics/', views.academics, name='academics'),
+    	path('achievements/', views.achievements, name='achievements'),
+    	path('gallery/', views.photo_gallery, name='photo_gallery'),
+	]
+	
+	
+	
 #django models
     from django.utils.translation import ugettext_lazy as _
     from django.db import models
