@@ -3,9 +3,11 @@ pip install django-el-pagination==3.1.0
 #settings installed apps
   'el_pagination',
 
-#templates before {% for instance in instances %}
+
+#templates before for loop ( {% for instance in instances %} ) add -
   {% load el_pagination_tags %}
-  {% paginate 21 instances %}
+  {% paginate 21 instances %} # 21 is the number of elements that should be loaded in a page
+
 
 #add widget after table container
   <!--pagination -->
@@ -14,6 +16,8 @@ pip install django-el-pagination==3.1.0
         {% show_pages %}
       </div>
   <!--pagination-->
+  
+  
 #add css for pagination - 
   div.pagination{
     display: flex;
