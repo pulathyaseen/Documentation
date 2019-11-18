@@ -1,4 +1,5 @@
 date formats:
   https://docs.djangoproject.com/en/dev/ref/templates/builtins/#date
   
-.
+css selector caller:
+  http://htmltocss.github.io/
