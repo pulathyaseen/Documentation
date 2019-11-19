@@ -24,7 +24,7 @@
 		
         photo = VersatileImageField('image', blank=True, null=True, upload_to='customers/') # image is the common name given to the files uploaded
 	
-	# changes in views.py -> chnages are to be made becouse ajax won't work on image field ""same edits are required in edit function
+	# changes in views.py -> chnages are to be made becouse ajax won't work on image field......... same edits are required in edit function
 		def create(request):
     		if request.method=='POST':
         		form = CustomersForm(request.POST,request.FILES)
@@ -77,6 +77,8 @@
 			
 	
 	# changes in template.html -> where the image is displayed
+	# Remove form classes 
+		class ="ajax reset redirect skip_empty_row not_allowed_without_formset" #remove these classes from form tag
 		<img class="img-responsive" src="{{instance.photo.crop.600x600}}" alt="{{instance.name}}" />
 		<img class="img-responsive" src="{{instance.photo.thumbnail.600x600}}" alt="{{instance.name}}" /> 
 
