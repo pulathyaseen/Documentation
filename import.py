@@ -11,9 +11,13 @@
     
 
 #modules for urls.py in app
-
-    from django.conf.urls import url,include
-    import views
+    #python2 -->
+        from django.conf.urls import url,include
+        import views
+    
+    # python3 -->
+        from django.urls import path
+        from . import views
     
 
 #modules for views.py (especially for erp)
