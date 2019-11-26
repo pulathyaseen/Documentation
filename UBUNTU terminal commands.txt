@@ -12,3 +12,11 @@
     
 #installing using pip
     pip install virualenv virtualenvwrapper
+
+
+#To unHide menu bar of Sublime :
+    Ctrl + shift + p   =>   Search for Menu   =>   select view-Toggle menu
+
+#To configure git lab in computer :
+    git config --global user.name “Muhammed Yaseen P”
+    git config --global user.email “yaseen.talrop@gmail.com”
