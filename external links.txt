@@ -4,5 +4,5 @@ date formats:
 css selector caller:
   http://htmltocss.github.io/
 
-different types date picker in javascript - JQuery
+different types of date picker in javascript - JQuery
   https://flatpickr.js.org/examples/
