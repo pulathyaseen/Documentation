@@ -23,7 +23,10 @@
 #modules for views.py (especially for erp)
 
     from django.core.urlresolvers import reverse
-    from django.http.response import HttpResponseRedirect, HttpResponse
+    #python2
+        from django.http.response import HttpResponseRedirect, HttpResponse
+    #python3
+        from django.http import HttpResponse, HttpResponseRedirect
     import json
     import datetime
     from users.forms import UserForm
