@@ -1,0 +1,13 @@
+
+<!-- to be added after footer -->
+<script>
+	if('serviceWorker' in navigator) {
+		window.addEventListener('load',function(){
+			navigator.serviceWorker.register("/sw.js").then(function(registration){
+				console.log('serviceWorker registration successfull with scope: ',registration.scope);
+			},function(err){
+				console.log('serviceWorker registration failed: ',err);
+			});
+		});
+	}
+</script>
