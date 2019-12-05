@@ -4,7 +4,7 @@ pip install django-el-pagination==3.1.0
   'el_pagination',
 
 
-#templates before for loop ( {% for instance in instances %} ) add -
+#templates before for loop ( {% for instance in instances %} ) add -->
   {% load el_pagination_tags %}
   {% paginate 21 instances %} # 21 is the number of elements that should be loaded in a page
 
