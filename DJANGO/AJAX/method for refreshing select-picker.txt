@@ -45,6 +45,7 @@ urls.py
    
 
 views.py
+
     @ajax_required
     @require_GET
     def get_divisions(request):
