@@ -1,0 +1,65 @@
+
+<script>
+    $(document).ready(function(){
+        var class = $('#id_department').val();
+        showDivisions(class);
+    });
+    $('#id_department').on('change', function(){
+        var class = $(this).val();
+        showDivisions(class);
+    });
+    function showDivisions(dept_id){
+        if(!dept_id){
+            $('#id_sub_division').html('<option value="">--Select student class first--</option>');
+            $('#id_sub_division').selectpicker('refresh');
+
+        }else{
+
+            var url = "{% url 'pta:get_divisions' %}" + "?pk=" + dept_id;
+
+            $.getJSON(url, function(models) {
+                var options = '<option value="">---------</option>';
+                for (var i = 0; i < models.length; i++) {
+
+                    options += '<option value="' + models[i]['division_id'] + '">' + models[i]['division_name'] + '</option>';
+                }
+                $('#id_sub_division').html(options);
+                $('#id_sub_division').selectpicker('refresh');
+
+            }).error(function() {
+                alert("Divisions not loaded. Please refresh page again.");                      
+            });
+        }
+    }
+</script>
+
+
+
+..............python................
+
+
+
+urls.py
+
+    url(r'^get-divisions/$', views.get_divisions, name='get_divisions'),
+   
+
+views.py
+    @ajax_required
+    @require_GET
+    def get_divisions(request):
+        pk = request.GET.get('pk')
+        if Department.objects.filter(pk=pk,is_deleted=False).exists():
+            department = get_object_or_404(Department.objects.filter(pk=pk,is_deleted=False))
+            divisions = SubDivision.objects.filter(department=department,is_deleted=False)
+
+            response_data    = []
+            for division in divisions:
+                sub_division = str(division.department) + '-' + str(division.name)
+                division_dict = {
+                    'division_id' : str(division.pk),
+                    'division_name' : sub_division,
+                }
+                response_data.append(division_dict)
+
+            return HttpResponse(json.dumps(response_data), content_type='application/javascript')
