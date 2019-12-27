@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.placeholder {
+		  background-color: #f6f6f6;
+		  background-size: cover;
+		  background-repeat: no-repeat;
+		  position: relative;
+		  overflow: hidden;
+		}
+		.placeholder img {
+		  position: absolute;
+		  opacity: 1;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  transition: opacity 1s linear;
+		}
+		.placeholder img.loaded {
+		  opacity: 1;
+		}
+		.img-small {
+		}
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			list-style: none;
+			width:90%;
+			margin: 0 auto;
+			padding:0;
+			justify-content: space-between;
+		}
+		ul li {
+			width:32%;
+			margin-bottom:30px;
+
+		}
+	</style>
+	
+</head>
+<body>
+	<ul>
+		<li>
+			<div class="placeholder" data-large="images/image.jpg">
+		      	<img src="images/image.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image2.jpg">
+		      	<img src="images/image2.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image3.jpg">
+		     	<img src="images/image3.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image.jpg">
+		      	<img src="images/image.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image2.jpg">
+		      	<img src="images/image2.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image3.jpg">
+		     	<img src="images/image3.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+
+		<li>
+			<div class="placeholder" data-large="images/image.jpg">
+		      	<img src="images/image.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image2.jpg">
+		      	<img src="images/image2.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image3.jpg">
+		     	<img src="images/image3.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image.jpg">
+		      	<img src="images/image.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image2.jpg">
+		      	<img src="images/image2.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image3.jpg">
+		     	<img src="images/image3.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+
+		<li>
+			<div class="placeholder" data-large="images/image.jpg">
+		      	<img src="images/image.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image2.jpg">
+		      	<img src="images/image2.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image3.jpg">
+		     	<img src="images/image3.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image.jpg">
+		      	<img src="images/image.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image2.jpg">
+		      	<img src="images/image2.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image3.jpg">
+		     	<img src="images/image3.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+
+		<li>
+			<div class="placeholder" data-large="images/image.jpg">
+		      	<img src="images/image.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image2.jpg">
+		      	<img src="images/image2.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image3.jpg">
+		     	<img src="images/image3.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image.jpg">
+		      	<img src="images/image.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image2.jpg">
+		      	<img src="images/image2.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image3.jpg">
+		     	<img src="images/image3.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+
+		<li>
+			<div class="placeholder" data-large="images/image.jpg">
+		      	<img src="images/image.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image2.jpg">
+		      	<img src="images/image2.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image3.jpg">
+		     	<img src="images/image3.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image.jpg">
+		      	<img src="images/image.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image2.jpg">
+		      	<img src="images/image2.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image3.jpg">
+		     	<img src="images/image3.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+
+		<li>
+			<div class="placeholder" data-large="images/image.jpg">
+		      	<img src="images/image.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image2.jpg">
+		      	<img src="images/image2.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image3.jpg">
+		     	<img src="images/image3.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image.jpg">
+		      	<img src="images/image.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image2.jpg">
+		      	<img src="images/image2.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+		<li>
+			<div class="placeholder" data-large="images/image3.jpg">
+		     	<img src="images/image3.jpg" alt="Image" class="img-small">
+		      	<div style="padding-bottom: 56.25%;"></div>
+		    </div>
+		</li>
+	</ul>
+	
+    
+
+    
+
+    
+
+    
+
+    
+</body>
+</html>
