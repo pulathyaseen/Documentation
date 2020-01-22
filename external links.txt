@@ -6,3 +6,6 @@ css selector caller:
 
 different types of date picker in javascript - JQuery
   https://flatpickr.js.org/examples/
+
+Learn python 
+  https://www.programiz.com/python-programming
