@@ -20,3 +20,8 @@
 #To configure git lab in computer :
     git config --global user.name “Muhammed Yaseen P”
     git config --global user.email “yaseen.talrop@gmail.com”
+
+
+#Extract .rar file
+    sudo apt-get install unrar
+    unrar x -r /home/talrop/Downloads/zip-files/arkboss.rar
