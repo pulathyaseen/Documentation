@@ -1,0 +1,44 @@
+Download git for windows from : https://git-scm.com/downloads
+
+    By default, the python command runs extremely slow or never actually opens up the python interpreter on git bash.
+    To fix this, we need to create an alias for the python command.
+    Open or create the .bashrc file. This will open the nano editor.
+
+nano .bashrc
+
+    Add the following line to this file. 
+alias python='winpty python'
+    Press Ctrl-X to exit out of the file. It will ask to save the file. 
+    Type Y for Yes and Press ENTER to save and exit.
+
+source .bashrc
+    This will enable the alias for the remainder of your bash session. 
+    Note that this will also be enabled when you run git bash next time
+
+    Download and install python
+        64bit - https://www.python.org/ftp/python/3.6.3/python-3.6.3-amd64.exe
+        32bit - https://www.python.org/ftp/python/3.6.3/python-3.6.3.exe
+    install pip
+        download the script get-pip.py from this location https://bootstrap.pypa.io/get-pip.py
+        Open command window in the folder where get-pip.py is and run the following command. 
+python get-pip.py
+        This will download and install pip.
+
+git clone ...
+cd myproject
+
+    to create a virtual environment
+python -m venv venv
+
+     to activate the virtual environment
+source venv/Scripts/activate.bat
+
+pip install -r r.txt
+    Install dependencies
+    
+    Run the migrate command to create database structure
+python manage.py makemigrations
+python manage.py migrate
+
+    Run the built-in webserver
+python manage.py runserver
