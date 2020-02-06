@@ -1,11 +1,14 @@
 date formats:
-  https://docs.djangoproject.com/en/dev/ref/templates/builtins/#date
+    https://docs.djangoproject.com/en/dev/ref/templates/builtins/#date
   
 css selector caller:
-  http://htmltocss.github.io/
+    http://htmltocss.github.io/
 
 different types of date picker in javascript - JQuery
-  https://flatpickr.js.org/examples/
+    https://flatpickr.js.org/examples/
 
 Learn python 
-  https://www.programiz.com/python-programming
+    https://www.programiz.com/python-programming
+  
+special characters and html codes:
+    https://dev.w3.org/html5/html-author/charref
