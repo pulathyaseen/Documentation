@@ -12,3 +12,8 @@ Learn python
   
 special characters and html codes:
     https://dev.w3.org/html5/html-author/charref
+
+download font(otf files) from font squirell and convert here:
+    https://transfonter.org/
+    
+    .
