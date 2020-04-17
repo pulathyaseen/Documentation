@@ -4,9 +4,6 @@ date formats:
 css selector caller:
     http://htmltocss.github.io/
 
-different types of date picker in javascript - JQuery
-    https://flatpickr.js.org/examples/
-
 Learn python 
     https://www.programiz.com/python-programming
   
@@ -15,6 +12,9 @@ special characters and html codes:
 
 download font(otf files) from font squirell and convert here:
     https://transfonter.org/
+
+different types of date picker in javascript - JQuery
+    https://flatpickr.js.org/examples/
 
 date picker best styled:
     https://github.com/fengyuanchen/datepicker/blob/master/README.md
