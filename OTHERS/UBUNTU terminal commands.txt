@@ -25,3 +25,9 @@
 #Extract .rar file
     sudo apt-get install unrar
     unrar x -r /home/talrop/Downloads/zip-files/arkboss.rar
+
+
+#To load complete database (.sql file)
+    psql -h localhost -d <db name> -U <user name> -f <path to file>
+    eg:
+        psql -h localhost -d arkboss_kallara -U talrop -f /home/talrop/Downloads/database.sql
