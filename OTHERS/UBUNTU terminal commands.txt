@@ -26,8 +26,12 @@
     sudo apt-get install unrar
     unrar x -r /home/talrop/Downloads/zip-files/arkboss.rar
 
+#To compress whole database into .sql file
+    pg_dump -h localhost -d <db name> -U <user name> -f <where to save path>
+    eg:
+        pg_dump -h localhost -d db_indograce -U indograce_demo -f /home/talrop/Downloads/database.sql
 
 #To load complete database (.sql file)
     psql -h localhost -d <db name> -U <user name> -f <path to file>
     eg:
-        psql -h localhost -d arkboss_kallara -U talrop -f /home/talrop/Downloads/database.sql
+        psql -h localhost -d db_indograce -U indograce_demo -f /home/talrop/Downloads/database.sql
