@@ -1,2 +1,3 @@
+django-inlinecss
 pisa
 xhtml2pdf
