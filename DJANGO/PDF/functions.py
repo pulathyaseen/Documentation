@@ -1,8 +1,8 @@
 from io import BytesIO
 import xhtml2pdf.pisa as pisa
 from django.http import HttpResponse
-from project_name.settings import STATIC_FILE_ROOT
 from django.template.loader import get_template
+from project_name.settings import STATIC_FILE_ROOT
 
 
 def render_to_pdf(template_src, context_dict):
