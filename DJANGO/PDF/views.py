@@ -8,4 +8,4 @@ def convert_to_pdf(request):
 		'data': data,
 		...
 	}
-	return render_to_pdf(request,'path/to/template.html',context)
+	return render_to_pdf('path/to/template.html',context)
