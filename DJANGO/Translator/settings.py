@@ -1,6 +1,9 @@
 from django.utils.translation import ugettext_lazy as _
 
-
+MIDDLEWARE = [
+    'django.middleware.locale.LocaleMiddleware',
+    ...
+]
 LOCALE_PATHS = (
         os.path.join(BASE_DIR, 'locale'),
     )
