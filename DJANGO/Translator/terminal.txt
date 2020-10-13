@@ -1,0 +1,7 @@
+after adding {% trans '' %} to all static texts in templates 
+
+    django-admin makemessages -l ml
+   
+after adding the corresponding language data in locale/*/*/django.po 
+    
+    django-admin compilemessages
