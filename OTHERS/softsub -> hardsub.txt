@@ -1,0 +1,26 @@
+sudo apt install mencoder
+sudo apt install mkvtoolnix
+
+to create mp4 file without sub-title
+    mencoder -oac pcm -ovc copy -o output-file.mp4    input-file-name.mkv
+                                   '''''''''''''''    '''''''''''''''''''
+
+to view all files in the file (video/audio/subs)
+    mkvmerge -i input-file-name.mkv
+                '''''''''''''''''''
+        (output)
+        Track ID 0: video (MPEG-H/HEVC/h.265)
+        Track ID 1: audio (AAC)
+        Track ID 2: subtitles (SubRip/SRT)
+
+to extract sub from video file
+    mkvextract tracks input-file-name.mkv 2:sub.srt (2 since the sub is @ Track ID 2)
+                      '''''''''''''''''''   '''''''
+        the subtitle wil be extraxted as sub.txt
+
+to make file with hardsub
+    mencoder -sub sub.srt -subcp iso-8857-9 -ovc xvid -xvidencopts bitrate=1419 -oac copy -o new-file-name.mp4 output-file.mp4
+                  '''''''                                                                    ''''''''''''''''' """""""""""""""
+
+
+the file will saved 😜
