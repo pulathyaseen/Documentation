@@ -54,23 +54,6 @@ sudo apt-get update
 
 sudo apt-get install python3-distutils -y
  sudo apt-get install python3.6
-#Venv change
-virtualenv venv -p python3
-pip install django
-
-#Changes in project
-main/“on_delete=models.CASCADE”  added in models.py
-users/“on_delete=models.CASCADE”  added in models.py
-        
-Reverse changed:-  from django.urls import reverse
-
-#install(uninstall before installing)
-pip install django-registration-redux
-
-#main_app urls
-url(r'^app/users/', include(('users.urls', 'users'), namespace="users")),
-
-
 
 For getting emmet in sublime text 3
 Preferences->package-settings->package-control->settings-user
