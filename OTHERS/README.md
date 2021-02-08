@@ -19,5 +19,7 @@ different types of date picker in javascript - JQuery
 date picker best styled:
     https://github.com/fengyuanchen/datepicker/blob/master/README.md
 
+Contries, States and Cities as json, xml ,...
+    https://dr5hn.github.io/countries-states-cities-database/
 
 .
