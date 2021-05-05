@@ -22,4 +22,6 @@ date picker best styled:
 Contries, States and Cities as json, xml ,...
     https://dr5hn.github.io/countries-states-cities-database/
 
+Many notable functions
+    https://gist.github.com/night-crawler/
 .
