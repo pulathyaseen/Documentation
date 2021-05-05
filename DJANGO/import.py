@@ -21,8 +21,6 @@
 
     from django.core.urlresolvers import reverse
     from django.http.response import HttpResponseRedirect, HttpResponse
-    import json
-    import datetime
     from django.views.decorators.http import require_GET, require_POST
     from django.contrib.auth.decorators import login_required
     from django.shortcuts import resolve_url, render, get_object_or_404
@@ -52,5 +50,4 @@
 
     from django import forms
     from django.forms.widgets import TextInput, Textarea, Select
-    from django.utils.translation import ugettext_lazy as _
     from dal import autocomplete
