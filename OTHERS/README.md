@@ -1,5 +1,8 @@
 date formats:
-    https://docs.djangoproject.com/en/dev/ref/templates/builtins/#date
+    in templates:
+        https://docs.djangoproject.com/en/dev/ref/templates/builtins/#date
+    in views:
+        https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
   
 css selector caller:
     http://htmltocss.github.io/
