@@ -1,5 +1,6 @@
 # Steps to Follow
 1: Install required packages
+
 2: Set the values as given in the file settings.py
 3: Add `{% load i18n %}` in all pages that may require translation
 4: Enclose every static content with `{% trans '' %}`
